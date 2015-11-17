@@ -1,0 +1,10 @@
+from django.contrib import admin
+from .models import MapDetail,MapSearch
+
+class DetailInline(admin.TabularInline):
+	model = MapDetail
+
+class MapAdmin(admin.ModelAdmin):
+	inlines = [DetailInline]
+
+admin.site.register(MapSearch,MapAdmin)

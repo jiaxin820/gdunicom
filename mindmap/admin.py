@@ -1,5 +1,7 @@
 from django.contrib import admin
-from .models import MapDetail,MapSearch
+from .models import MapDetail
 
-admin.site.register(MapSearch)
-admin.site.register(MapDetail)
+class MapAdmin(admin.ModelAdmin):
+	pass
+
+admin.site.register(MapDetail,MapAdmin)
